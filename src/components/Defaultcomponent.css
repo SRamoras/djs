@@ -1,0 +1,140 @@
+.default-component-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    gap: 40px;
+  }
+  
+  .img-container {
+    width: 50%;
+    height: 100%;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 55px;
+  }
+  
+  .default-component-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  /* Typography for heading and paragraph */
+  .default-component-text h1 {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: start;
+    margin: 0;
+    color: #000;
+    font-family: NeueMontreal, sans-serif;
+  }
+  .text-container-sup {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .default-component-text p {
+    font-size: 25px;
+  
+    color: #414141;
+    font-weight: 300;
+  }
+  
+  /* Accordion Styles */
+  .accordion {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+  
+  .accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+  }
+  
+  .accordion-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    color: #555;
+    min-width: 55px;
+  }
+  
+  .accordion-title {
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 42px;
+    text-align: start;
+  
+    margin: 0;
+    color: #000000;
+  }
+  
+  
+  
+  .accordion-content-container {
+  overflow: hidden;
+  max-height: 0;
+
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Quando o item está ativo, expande o conteúdo */
+.accordion-item.active .accordion-content-container {
+  max-height: 300px; /* Ajuste esse valor para acomodar seu conteúdo */
+  opacity: 1;
+}
+
+
+
+
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .accordion-header a {
+    text-decoration: none;
+color: #000;
+  }
+.accordion-header {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    gap: 140px;
+  }
+
+  .accordion-title-container {
+    display: flex;
+  flex-direction: column;
+    gap: 10px;
+  }
+  
+  .accordion-content {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #696969;
+  }
+  

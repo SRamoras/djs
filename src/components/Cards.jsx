@@ -12,6 +12,20 @@ const ScrollComponent = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   
+    // Cria o ScrollTrigger para fixar o container-text-cards
+    ScrollTrigger.create({
+      trigger: ".scroll-section",
+      start: "top 100px", // mesmo ponto de início da animação dos cards
+      end: () => {
+        // Calcula o fim com base na quantidade de items (cards)
+        const items = document.querySelectorAll(".scroll-section .item");
+        return `+=${items.length * 100}%`;
+      },
+      pin: ".container-text-cards",
+      pinSpacing: false,
+      // markers: true, // descomente para debugar
+    });
+  
     const scrollSections = document.querySelectorAll(".scroll-section");
     scrollSections.forEach((section) => {
       const wrapper = section.querySelector(".wrapper");
@@ -40,8 +54,10 @@ const ScrollComponent = () => {
         scrollTrigger: {
           trigger: section,
           pin: true,
-          start: "top top",
-          end: () => `+=${items.length * 100}%`,
+          start: "top 100px", // quando o topo do section estiver a 100px do topo da viewport
+          end: () => {
+            return `+=${items.length * 100}%`;
+          },
           scrub: 1,
           invalidateOnRefresh: true,
           // markers: true, // descomente para debugar
@@ -64,16 +80,22 @@ const ScrollComponent = () => {
   
     // Cleanup: mata todos os ScrollTriggers ao desmontar o componente
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.killTweensOf("*");
     };
   }, []);
   
 
+
+
   return (
     <main className="main-wrapper">
-
-
+      <div className="container-text-cards">
+  <h1>Innovate. Capture. Soar.</h1>
+  <h2>Discover Our Latest Innovations</h2>
+  <p>
+    Explore our range of cutting-edge products designed to empower your creative journey. The OSMO MOBILE 7 SERIES offers superior stabilization for mobile videography, while the OSMO ACTION 5 PRO is built for capturing extreme action. With the versatile DJI FLIP, unleash your creative potential, and check out our guide on "How to choose a drone" for expert tips on making the perfect selection.
+  </p></div>
       {/* Seção de Scroll Vertical */}
       <section className="scroll-section vertical-section section">
   <div className="wrapper">
@@ -139,7 +161,7 @@ const ScrollComponent = () => {
             <p>View More</p>
           </div>
         </div>
-        <img className="item_media" src={Tree} alt="" />
+        <img className="item_media" src={Four} alt="" />
       </div>
       
       <div role="listitem" className="item">
@@ -160,9 +182,8 @@ const ScrollComponent = () => {
             <p>View More</p>
           </div>
         </div>
-        <img className="item_media" src={Four} alt="" />
+        <img className="item_media" src={Tree} alt="" />
       </div>
-      
     </div>
   </div>
 </section>
