@@ -1,0 +1,60 @@
+/* Header fixo com efeito de blur e transparência */
+.header {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    border-radius: 55px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(70, 70, 70, 0.1); /* fundo transparente */
+    backdrop-filter: blur(10px); /* efeito blur */
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+  
+  /* Logo à esquerda */
+  .logo img {
+    height: 40px; /* ajuste conforme necessário */
+  }
+  
+  /* Container dos botões de navegação à direita */
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Botões padrão que herdam a cor do header */
+  .btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .btn:hover {
+    color: #ccc;
+  }
+  
+  /* Botão principal com fundo preto */
+  .main-btn {
+    border-radius: 55px;
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .main-btn:hover {
+    background: #333;
+  }
+  

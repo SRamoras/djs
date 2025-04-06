@@ -6,13 +6,6 @@
 }
 
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
 
 .heading {
   font-size: 2.5rem;
@@ -44,8 +37,8 @@ h2 {
 }
 
 .item {
-  width: 70%; /* ou 100%, conforme sua necessidade */
-  height: 70%; 
+  width: 100%; /* ou 100%, conforme sua necessidade */
+  height: 100%; 
   border-radius: 55px;
   display: flex;
   position: absolute;
@@ -121,6 +114,7 @@ margin-top: 100px;
   width: 60%;
   margin: 0 auto;
   height: 100%;
+  margin-bottom: 40px;
 }
 
 .container-text-cards h1{
@@ -130,14 +124,13 @@ margin-top: 100px;
 }
 
 .container-text-cards h2{
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 1.1;
-  text-align: center;
-  margin: 0;
+  font-weight: 400;
+  line-height:60px;
   color: #000;
-  font-family: NeueMontreal, sans-serif;
+  font-size: 55px;
+  text-align: center;
 }
+
 
 .container-text-cards p{
   font-size: 25px;  text-align: center;

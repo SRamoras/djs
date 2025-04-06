@@ -1,0 +1,136 @@
+/* Container principal */
+
+
+
+.option-component {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+    height: 100vh;
+  }
+
+
+
+    .option-component-text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+  }
+
+
+.text-container-options{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  /* Título e texto */
+
+  .option-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Container do carrossel */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+
+
+
+  /* Carrossel (slider) */
+  .carousel {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+    gap: 20px;
+  }
+
+  /* Cada item ocupa 35% do container, com um gap de 5% (total de 40% por item) */
+  .carousel-item {
+    flex: 0 0 35%;
+    padding: 40px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: opacity 0.3s ease;
+    font-size: 1.5rem;
+    color: #333;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .option-component-buttons {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: -5rem;
+    gap: .625rem;
+    bottom: 0px;
+ 
+
+  }.carousel-item-title {
+    font-size: 30px;
+    font-weight: 300;
+    font-family: NeueMontreal, sans-serif;
+  }
+  /* Botões de navegação (setas) */
+  .arrow {
+    align-items: center;
+    color: #696969;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+    border: 1px solid #696969;
+    border-radius: 100vmax;
+    background-color: #fff;
+
+    transition: border-color 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+
+  
+
+  
+
+
+
+  .option-component h2{
+font-weight: 400;
+line-height:60px;
+color: #000;
+font-size: 55px;
+text-align: center;
+  }
+
+
+  .option-component p{
+    margin: 0;
+    font-weight: 400;
+    color: #696969;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+  }

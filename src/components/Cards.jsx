@@ -8,6 +8,7 @@ import Two from "/images/2.webp";
 import Tree from "/images/3.webp";
 import Four from "/images/4.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
+import GradientButton from "./GradientButton";
 const ScrollComponent = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -114,10 +115,9 @@ const ScrollComponent = () => {
               Explore innovative design and performance with the DJI FLIP. Discover key insights to elevate your aerial photography and videography experience.
             </p>
           </div>
-          <div className="item_bottom">
-            <button><FaArrowRightLong /></button>
-            <p>View More</p>
-          </div>
+          <GradientButton>
+        VIEW MORE
+      </GradientButton>
         </div>
         <img className="item_media" src={One} alt="" />
       </div>
@@ -135,10 +135,9 @@ const ScrollComponent = () => {
               Experience the perfect fusion of style and functionality with the OSMO ACTION 5 PRO. Uncover tips for capturing breathtaking action shots and smooth footage.
             </p>
           </div>
-          <div className="item_bottom">
-            <button><FaArrowRightLong /></button>
-            <p>View More</p>
-          </div>
+          <GradientButton>
+        VIEW MORE
+      </GradientButton>
         </div>
         <img className="item_media" src={Two} alt="" />
       </div>
@@ -156,10 +155,9 @@ const ScrollComponent = () => {
               Embrace advanced stabilization with the OSMO MOBILE 7 SERIES. Learn how its design enhances mobile filmmaking and creative storytelling.
             </p>
           </div>
-          <div className="item_bottom">
-            <button><FaArrowRightLong /></button>
-            <p>View More</p>
-          </div>
+          <GradientButton>
+        VIEW MORE
+      </GradientButton>
         </div>
         <img className="item_media" src={Four} alt="" />
       </div>
@@ -177,10 +175,9 @@ const ScrollComponent = () => {
               Master the art of drone selection with our comprehensive guide. Gain insights into features, performance, and design that cater to your flying needs.
             </p>
           </div>
-          <div className="item_bottom">
-            <button><FaArrowRightLong /></button>
-            <p>View More</p>
-          </div>
+          <GradientButton>
+        VIEW MORE
+      </GradientButton>
         </div>
         <img className="item_media" src={Tree} alt="" />
       </div>

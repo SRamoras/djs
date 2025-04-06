@@ -1,0 +1,281 @@
+.default-component-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    gap: 40px;
+  }
+  
+  .img-container {
+    width: 50%;
+    height: 100%;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 55px;
+  }
+  
+  .default-component-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  
+  /* Typography for heading and paragraph */
+  .default-component-text h1 {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: start;
+    margin: 0;
+    color: #000;
+    font-family: NeueMontreal, sans-serif;
+  }
+  .text-container-sup {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .default-component-text p {
+    font-size: 25px;
+  
+    color: #414141;
+    font-weight: 300;
+  }
+  
+  /* Accordion Styles */
+  .accordion {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+  
+  .accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+  }
+  
+  .accordion-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    color: #555;
+    min-width: 55px;
+  }
+  
+  .accordion-title {
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 42px;
+    text-align: start;
+  
+    margin: 0;
+    color: #000000;
+  }
+  
+  
+  
+  .accordion-content-container {
+  overflow: hidden;
+  max-height: 0;
+
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Quando o item está ativo, expande o conteúdo */
+.accordion-item.active .accordion-content-container {
+  max-height: 300px; /* Ajuste esse valor para acomodar seu conteúdo */
+  opacity: 1;
+}
+
+
+
+
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .accordion-header a {
+    text-decoration: none;
+color: #000;
+  }
+.accordion-header {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    gap: 140px;
+  }
+
+  .accordion-title-container {
+    display: flex;
+  flex-direction: column;
+    gap: 10px;
+  }
+  
+  .accordion-content {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #696969;
+  }
+  
+
+  .more-button {
+    background-color: #f0f0f0;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+  }
+
+
+
+  .animated-button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, sans-serif;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    transition: all 0.3s ease, color 0.3s ease;
+  }
+
+  /* Corrigindo para ::before (não ::bef) */
+  .animated-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.65s cubic-bezier(.23,1,.32,1);
+    opacity: 0;
+    z-index: 0;
+  }
+
+  /* Ao passar o mouse, o background do botão é alterado e a animação dos custom properties inicia */
+  .animated-button:hover {
+    background: radial-gradient(100% 100% at var(--5-x-position) var(--5-y-position), #ffd451 -35%, transparent),
+                radial-gradient(100% 100% at var(--6-x-position) var(--6-y-position), #ff7c55 20%, transparent),
+                radial-gradient(100% 100% at var(--7-x-position) var(--7-y-position), #38b3df 75%, transparent),
+                #1b253b;
+    animation: main 20s ease-in-out infinite;
+  }
+  
+  /* Garantindo que o conteúdo (texto e SVG) fique acima do pseudo-elemento */
+  .animated-button .text,
+  .animated-button > svg {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .animated-button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .animated-button:hover > svg {
+    transform: translateX(5px);
+  }
+  
+  .animated-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Definindo as custom properties que serão animadas (note que @property é experimental) */
+  @property --5-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 13.945312500000002%;
+  }
+  @property --5-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 88.203125%;
+  }
+  @property --6-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 42.69531250000001%;
+  }
+  @property --6-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59.84374999999999%;
+  }
+  @property --7-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 68.4765625%;
+  }
+  @property --7-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 30.5859375%;
+  }
+  
+  /* Valores iniciais */
+  :root {
+    --5-x-position: 13.945312500000002%;
+    --5-y-position: 88.203125%;
+    --6-x-position: 42.69531250000001%;
+    --6-y-position: 59.84374999999999%;
+    --7-x-position: 68.4765625%;
+    --7-y-position: 30.5859375%;
+  }
+  
+  /* Keyframes para animar as posições dos radial gradients */
+  @keyframes main {
+    25% {
+      --5-x-position: 15%;
+      --5-y-position: 15%;
+      --6-x-position: 85%;
+      --6-y-position: 80%;
+    }
+    50% {
+      --5-x-position: 80%;
+      --5-y-position: 15%;
+      --6-x-position: 15%;
+      --6-y-position: 85%;
+      --7-x-position: 20%;
+      --7-y-position: 20%;
+    }
+    100% {
+      --5-x-position: 13.945312500000002%;
+      --5-y-position: 88.203125%;
+      --6-x-position: 42.69531250000001%;
+      --6-y-position: 59.84374999999999%;
+      --7-x-position: 68.4765625%;
+      --7-y-position: 30.5859375%;
+    }
+  }

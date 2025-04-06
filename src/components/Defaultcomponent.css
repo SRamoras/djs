@@ -45,7 +45,7 @@
   .text-container-sup {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
   .default-component-text p {
     font-size: 25px;
