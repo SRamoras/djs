@@ -53,3 +53,23 @@
     margin: 0;
     font-family: NeueMontreal, sans-serif;
   }
+
+
+  @media (max-width: 768px) {
+    .main-heading-text {
+      width: 80%;  /* Aumenta a largura para melhor aproveitamento em telas menores */
+      gap: 1rem;   /* Reduz o espaçamento entre os elementos */
+      font-size: 1.5rem; /* Ajusta o tamanho da fonte padrão */
+    }
+    
+    .main-heading-text h1 {
+      font-size: 3rem; /* Reduz o tamanho do título */
+    }
+    
+    /* Se necessário, ajuste o vídeo também para não perder o recorte */
+    .video-container {
+      top: 10px;
+      bottom: 10px;
+      border-radius: 30px;
+    }
+  }

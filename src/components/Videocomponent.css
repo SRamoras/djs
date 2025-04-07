@@ -1,20 +1,13 @@
 .default-component-container {
     display: flex;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+
+
     position: relative;
     gap: 40px;
   }
   
-  .img-container {
-    width: 50%;
-    height: 100%;
-    border-radius: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   .img-container video {
     width: 100%;
@@ -24,7 +17,7 @@
   }
   
   .default-component-text {
-    width: 50%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49,7 +42,7 @@
   }
   .default-component-text p {
     font-size: 25px;
-  margin-bottom: 20px;
+
     color: #414141;
     font-weight: 300;
   }
@@ -110,12 +103,6 @@
     text-decoration: none;
     color: #000;
     margin-top: 20px;
-  }
-.accordion-header {
-    display: flex;
-    align-items: start;
-    width: 100%;
-    gap: 140px;
   }
 
   .accordion-content {
@@ -267,3 +254,19 @@
       --7-y-position: 30.5859375%;
     }
   }
+
+
+  @media (max-width: 768px) {
+    .default-component-text h1 {
+      font-size: 40px;
+      line-height: 1.2;
+  }
+
+
+    .default-component-text p {
+      font-size: 18px;
+      color: #414141;
+      font-weight: 300;
+  }
+  }
+  

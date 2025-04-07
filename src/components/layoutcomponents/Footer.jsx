@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Footer.css';
 import HoverLink from '../HoverLink'; // ajuste o caminho conforme sua estrutura de pastas
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
@@ -29,28 +30,23 @@ const Footer = () => {
       <div className="footer-options">
         <div>
           <p>© 2025 Script Runner. All rights reserved.</p>    
-    
           <HoverLink href="/privacy-policy" text="Privacy Policy" />
         </div>
         <div>
           <HoverLink href="mailto:sales@scriptrunner.ai" text="sales@scriptrunner.ai" />
           <HoverLink href="/book-a-demo" text="Book a demo" />
-    
-    
           <HoverLink
             href="https://www.linkedin.com/company/scriptrunner"
             target="_blank"
             rel="noopener noreferrer"  
             text="Linkedin"
           />
-         
-    
         </div>
       </div>
 
       <div className="footer-text">
         {/* <h1>DJI Technology</h1> */}
-        <img src="/images/djibrand.png" alt="" />
+        <img src="/images/djibrand.png" alt="DJI Brand" />
       </div>
     </footer>
   );

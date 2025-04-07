@@ -9,57 +9,88 @@ footer {
   overflow: hidden;
   color: #fff;
 }
+
+.footer-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+}
+
+.footer-options {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-options div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite quebra de linha em dispositivos menores */
+}
+
+.footer-options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-options a:hover {
+  color: #ccc;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-text img {
+  width: 1300px;
+  position: absolute;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+  footer {
+    height: auto; /* Permite que o footer ajuste sua altura conforme o conteúdo */
+    padding: 20px 0;
+  }
   
   .footer-options {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 70%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    margin: 0 auto;
-    align-items: center;
-  }
-  .footer-options div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-options a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
   }
   
-  .footer-options a:hover {
-    color: #ccc;
+  .footer-options div {
+    flex-direction: column;
+    gap: 10px;
   }
-
+  
   .footer-text {
-display: flex;
-justify-content: center;
-
+    margin-top: 20px;
   }
-  .footer-text img{
-    width: 1300px;
-    position: absolute;
- 
+  
+  .footer-text img {
+    width: 100%;
+    position: relative;
+    max-width: 300px; /* ajuste conforme necessário */
+    margin: 0 auto;
   }
-  .footer-text h1 {
-    margin: 0;
-    position: absolute;
-    bottom: 0px;
-    font-size: 180px;
-    display: inline-block;
-    font-weight: 900;
-    transform: scaleY(1.1);
-    background: linear-gradient(180deg, rgba(255,239,0,1) 0%, rgba(255,196,0,1) 52%, rgba(255,145,0,1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-
-  }
+}

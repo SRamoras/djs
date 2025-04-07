@@ -1,60 +1,146 @@
-/* Header fixo com efeito de blur e transparência */
 .header {
-    position: fixed;
-    top: 40px;
-    left: 50%;
-    width: 50%;
-    transform: translateX(-50%);
-    border-radius: 55px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(70, 70, 70, 0.1); /* fundo transparente */
-    backdrop-filter: blur(10px); /* efeito blur */
-    z-index: 1000;
-    transition: color 0.3s ease;
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  border-radius: 55px;
+  padding: 10px 20px;
+  background: rgba(70, 70, 70, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navegação inline (desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botão hamburger: oculto no desktop por padrão */
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none; /* Oculto no desktop */
+}
+
+/* Ícone do hamburger */
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  position: relative;
+}
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+}
+.hamburger-icon::before {
+  top: -8px;
+}
+.hamburger-icon::after {
+  top: 8px;
+}
+
+/* Menu dropdown para mobile */
+/* Menu dropdown para mobile */
+.nav-dropdown {
+  margin-top: 10px;
+  border-radius: 55px;
+  animation: dropdownAnimation 0.5s ease-out;
+}
+
+@keyframes dropdownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* Logo à esquerda */
-  .logo img {
-    height: 40px; /* ajuste conforme necessário */
+  40% {
+    opacity: 1;
+    transform: translateY(10px);
   }
-  
-  /* Container dos botões de navegação à direita */
-  .nav-buttons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  60% {
+    transform: translateY(-5px);
   }
-  
-  /* Botões padrão que herdam a cor do header */
-  .btn {
-    background: transparent;
-    border: none;
-    color: inherit;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  100% {
+    transform: translateY(0);
   }
-  
-  .btn:hover {
-    color: #ccc;
+}
+
+.nav-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-dropdown a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.nav-dropdown a:hover {
+  color: #ccc;
+}
+
+/* Keyframes para a animação do dropdown */
+@keyframes dropdownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  /* Botão principal com fundo preto */
-  .main-btn {
-    border-radius: 55px;
-    background: #000;
-    border: none;
-    color: #fff;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    top: 20px;
+    width: 85%;
     padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 30px;
   }
-  
-  .main-btn:hover {
-    background: #333;
+  .logo img {
+    height: 30px;
   }
-  
+  .header-actions {
+    gap: 35px;
+  }
+  /* Exibe o botão hamburger no mobile */
+  .hamburger-btn {
+    display: block;
+  }
+  /* Oculta a navegação inline no mobile */
+  .nav-links {
+    display: none;
+  }
+}

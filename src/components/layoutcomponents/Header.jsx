@@ -7,6 +7,7 @@ import GradientButton from '../GradientButton';
 
 const Header = () => {
   const [textColor, setTextColor] = useState('white');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -15,45 +16,69 @@ const Header = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Se a .video-container estiver visível, mantenha o texto (e o logo) em branco; caso contrário, use preto
         setTextColor(entry.isIntersecting ? 'white' : 'black');
       },
-      {
-        threshold: 0,
-      }
+      { threshold: 0 }
     );
 
     observer.observe(videoContainer);
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   const handleLogoClick = (e) => {
     if (location.pathname === '/') {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <header className="header" style={{ color: textColor }}>
-      <div className="logo">
-        <Link to="/" onClick={handleLogoClick}>
-          <img src={textColor === 'white' ? WhiteLogo : Logo} alt="Logo" />
-        </Link>
+      <div className="header-top">
+        <div className="logo">
+          <Link to="/" onClick={handleLogoClick}>
+            <img src={textColor === 'white' ? WhiteLogo : Logo} alt="Logo" />
+          </Link>
+        </div>
+        <div className="header-actions">
+          {/* Botão hamburger: visível apenas no mobile */}
+          <button className="hamburger-btn" onClick={toggleMenu}>
+            <span className="hamburger-icon"></span>
+          </button>
+          {/* Navegação inline: visível apenas no desktop */}
+          <nav className="nav-links" style={{ color: textColor }}>
+            <Link to="/" style={{ color: textColor }}>Home</Link>
+            <Link to="/about" style={{ color: textColor }}>About</Link>
+            <Link to="/services" style={{ color: textColor }}>Services</Link>
+            <Link to="/contact" style={{ color: textColor }}>Contact</Link>
+          </nav>
+          {/* Botão Gradient sempre visível */}
+          <GradientButton className="gradient-btn">Get Started</GradientButton>
+        </div>
       </div>
-      <nav className="nav-buttons">
-        <button className="btn">Home</button>
-        <button className="btn">About</button>
-        <button className="btn">Services</button>
-        <button className="btn">Contact</button>
-        <GradientButton className="btn">Get Started</GradientButton>
-      </nav>
+      {/* Menu dropdown para mobile */}
+      {isMenuOpen && (
+        <nav className="nav-dropdown" style={{ color: textColor }}>
+          <ul>
+            <li>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} style={{ color: textColor }}>Home</Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)} style={{ color: textColor }}>About</Link>
+            </li>
+            <li>
+              <Link to="/services" onClick={() => setIsMenuOpen(false)} style={{ color: textColor }}>Services</Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)} style={{ color: textColor }}>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

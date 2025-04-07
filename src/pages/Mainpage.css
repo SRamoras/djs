@@ -48,3 +48,23 @@ font-weight: 400;
     flex-direction: column;
     gap: 150px;
   }
+
+  
+
+@media (max-width: 768px) {
+.main-page-content-text h1 {
+  font-size: 30px;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
+  color: #000;
+  font-family: NeueMontreal, sans-serif;
+  padding: 0 !important;width: 100% !important;
+}
+
+.main-page-content-text {
+
+  padding: 40px  0!important;
+}
+
+}

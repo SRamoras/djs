@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   gap: 80px;
-
 }
 
 /* Texto acima do carrossel */
@@ -53,8 +52,8 @@
 .carousel {
   display: flex;
   gap: 20px;
-  /* A largura total será a soma dos 2 conjuntos (4 itens cada) */
-  /* Como cada conjunto terá 4 itens + 3 gaps = 100% do container, o total será 200% */
+  /* A largura total será a soma dos 2 conjuntos (4 itens cada)
+     Como cada conjunto terá 4 itens + 3 gaps = 100% do container, o total será 200% */
   animation: scroll 20s linear infinite;
 }
 
@@ -77,6 +76,7 @@
 .carousel-item-icon {
   margin-bottom: 10px;
 }
+
 .carousel-item p {
   margin: 0;
   font-weight: 400;
@@ -85,14 +85,16 @@
   font-size: 22px;
   line-height: 30px;
 }
+
 .carousel-item h3 {
   font-weight: 400;
-    line-height: 60px;
-    color: #000;
-    font-size: 25px;
-    text-align: center;
+  line-height: 60px;
+  color: #000;
+  font-size: 25px;
+  text-align: center;
 }
-/* Animação de rolagem contínua: desloca exatamente 100% do container (1 conjunto de 4 itens + gaps) */
+
+/* Animação de rolagem contínua: desloca exatamente 100% do container (1 conjunto de itens) */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -105,4 +107,52 @@
 /* Pausa a animação ao passar o mouse */
 .carousel:hover {
   animation-play-state: paused;
+}
+
+/* Mobile: grid 2x2 exibindo apenas 4 itens */
+@media (max-width: 768px) {
+  .text-container-options {
+    width: 100%;
+  }
+  
+  .option-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  .option-text {
+    font-size: 18px;
+    color: #414141;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  /* Substitui o carrossel animado por um grid */
+  .carousel-container {
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 20px;
+    animation: none;
+  }
+  
+  .carousel-item {
+    flex: none; /* Remove as propriedades de flex para o grid */
+    width: auto;
+    padding: 15px;
+    gap: 20px;
+    justify-content: start;
+    border-radius: 55px;
+  }
+  .carousel-item h3 {
+    font-size: 26px;
+    line-height:1;
+  }
+  /* Exibe apenas os 4 primeiros itens (oculta os duplicados) */
+  .carousel-item:nth-child(n+5) {
+    display: none;
+  }
 }

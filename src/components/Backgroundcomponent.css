@@ -1,54 +1,90 @@
-.background-component-container{
-height: 70vh;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 40px;
-flex-direction: row;
-padding:50px;
-
-border-radius: 55px;
-background: linear-gradient(180deg, rgba(255,239,0,1) 0%, rgba(255,196,0,1) 52%, rgba(255,145,0,1) 100%);
-}
-.video-container-background{
+.background-component-container {
+    height: 70vh;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row;
+    padding: 50px;
+    border-radius: 55px;
+    background: linear-gradient(180deg, rgba(255,239,0,1) 0%, rgba(255,196,0,1) 52%, rgba(255,145,0,1) 100%);
+  }
+  
+  /* Container de vídeo */
+  .video-container-background{
+    width: 40%;
     height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.background-video-background{
+  
+  .background-video-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 65px;
-}
-
-
-
-
-
-.background-component-container div{
+  }
+  
+  /* Container de texto */
+  .text-content {
     width: 40%;
-display: flex;
-flex-direction: column;
-align-items: start;
-gap: 30px;
-    }
-.background-component-container h1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .background-component-container h1 {
     font-size: 70px;
     font-weight: 500;
     line-height: 1.1;
-    text-align: start;
+    text-align: left;
     margin: 0;
     color: #000;
     font-family: NeueMontreal, sans-serif;
+  }
+  
+  .background-component-container p {
+    font-size: 25px;
+    color: #414141;
+    font-weight: 300;
+  }
+  
+  /* Media Query para dispositivos móveis */
+  @media (max-width: 768px) {
+    .background-component-container {
+      flex-direction: column;
+      padding: 30px;
+      height: auto;
+      gap: 20px;
     }
-    .background-component-container p{
-        font-size: 25px;
+    
+    .text-content {
+      width: 100%;
+      align-items: start;
+      text-align: center;
+    }
+    
+    .background-component-container h1 {
+      font-size: 40px;
+      line-height: 1.2;
+    }
+    
+    .background-component-container p {
+        font-size: 18px;
         color: #414141;
         font-weight: 300;
-        }
+        text-align: start;
+      }
+    
+    .video-container-background {
+      width: 100%;
+      height: 300px; /* altura fixa para o container de vídeo no mobile */
+    }
+    
+
+  }
+  

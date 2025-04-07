@@ -26,7 +26,6 @@ const Backgroundcomponent = () => {
         scrollTrigger: {
           trigger: textRef.current,
           start: 'top 80%',
-        
         }
       }
     );
@@ -34,14 +33,15 @@ const Backgroundcomponent = () => {
 
   return (
     <div className="background-component-container">
-      <div ref={textRef}>
+      <div className="text-content" ref={textRef}>
         <h1 className="line">Revolutionize Your Aerial Perspective with DJI</h1>
-        <p className="line">
+        <p className="line background-component-container-text">
           Experience next-level aerial photography and videography with DJI drones. Engineered for precision and equipped with innovative features, our drones empower you to capture stunning visuals from the sky.
         </p>
-        <div className='line'>
-        <GradientButton className="explore-button">Explore More</GradientButton>
-      </div></div>
+        <div className="line">
+          <GradientButton className="explore-button">Explore More</GradientButton>
+        </div>
+      </div>
 
       <div className="video-container-background">
         <video

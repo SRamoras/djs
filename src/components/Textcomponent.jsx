@@ -15,13 +15,12 @@ const ScrollReveal = () => {
       const bg = el.dataset.bgColor;
       const fg = el.dataset.fgColor;
 
-      const text = new SplitType(el, { types: 'chars' });
+      // Divide o texto em palavras e caracteres
+      const text = new SplitType(el, { types: 'words, chars' });
 
       gsap.fromTo(
         text.chars,
-        {
-          color: bg,
-        },
+        { color: bg },
         {
           color: fg,
           duration: 0.3,
@@ -51,20 +50,20 @@ const ScrollReveal = () => {
 
     requestAnimationFrame(raf);
 
-    // Cleanup se necessário (por exemplo, destruir ScrollTrigger ou Lenis)
+    // Cleanup se necessário
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
-      // Aqui você pode adicionar um método de destruição para o lenis, se existir.
+      // Adicione aqui o método de destruição do lenis, se houver.
     };
   }, []);
 
   return (
     <div className="scroll-reveal-container">
-      {/* Adicione o texto com a classe 'reveal-type' e defina as cores via data-attributes */}
       <p className="reveal-type" data-bg-color="#DCDCDC" data-fg-color="#050505">
-      Soar high with innovative drone technology. <br />Capture vivid moments and stunning details.<br />Transform your vision into endless possibilities.
+        Soar high with innovative drone technology. <br />
+        Capture vivid moments and stunning details.<br />
+        Transform your vision into endless possibilities.
       </p>
-     
     </div>
   );
 };
