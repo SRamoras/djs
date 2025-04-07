@@ -52,9 +52,9 @@ const Videocomponent = () => {
 
       <div className="default-component-text" ref={textRef}>
         <div className="text-container-sup">
-          <h1 className="line">Revolutionize Your Aerial Perspective with DJI</h1>
+          <h1 className="line">Elevate Your Vision with DJI</h1>
           <p className="line">
-            Experience next-level aerial photography and videography with DJI drones. Engineered for precision and equipped with innovative features, our drones empower you to capture stunning visuals from the sky.
+          Discover the art of aerial imaging with DJI’s state-of-the-art drone technology. Designed with advanced stabilization and smart flight systems, DJI drones open up new creative horizons. Whether capturing sweeping landscapes or dynamic action shots, every moment is rendered with exceptional clarity and precision. Explore the skies and transform your creative vision into reality with DJI.
           </p>
         </div>
         {/* Envolvemos o botão para aplicar a animação */}

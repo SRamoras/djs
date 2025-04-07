@@ -65,10 +65,10 @@ const OptionComponent = () => {
       <div className="option-component-text">
         <div className="text-container-options" ref={textOptionsRef}>
           <h2 className="option-title line">
-            Experience the Next Generation of DJI Aerial Innovations for Unparalleled Creativity and Mastery
+          Elevate Your Aerial Experience: Unleashing Creativity and Precision in the Skies
           </h2>
           <p className="option-text line">
-            Discover our meticulously curated selection of innovative DJI products designed to elevate your aerial experience. From state-of-the-art drones engineered with cutting-edge stabilization and precision control to high-resolution cameras that capture every detail in vivid clarity, our range blends advanced technology with artistic vision.
+          Discover our meticulously curated selection of innovative DJI products designed to transform the way you capture the world from above. Each drone is built with advanced stabilization systems, precision control, and intelligent flight modes that deliver smooth, reliable performance in every scenario. Whether you're shooting expansive landscapes or dynamic, fast-paced action, our high-resolution cameras render every detail with vibrant clarity and depth. Embrace a harmonious blend of cutting-edge technology and creative artistry that empowers both professionals and enthusiasts to push the boundaries of aerial photography and videography. With DJI, elevate your perspective and unlock endless creative possibilities in every flight.
           </p>
         </div>
       </div>

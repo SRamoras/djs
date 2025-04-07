@@ -132,16 +132,11 @@ const DefaultComponent = () => {
           </h1>
           <p>
             <span className="line">
-              Experience next-level aerial photography and videography with DJI drones.
-            </span>
-            <br />
-            <span className="line">
-              Engineered for precision and equipped with innovative features,
-            </span>
-            <br />
-            <span className="line">
-              our drones empower you to capture stunning visuals from the sky.
-            </span>
+              Experience next-level aerial photography and videography with DJI drones. 
+              Engineered for precision and equipped with innovative features, our drones empower you to capture stunning visuals from the sky.
+            </span>    
+
+
           </p>
         </div>
 

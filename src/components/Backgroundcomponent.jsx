@@ -34,9 +34,9 @@ const Backgroundcomponent = () => {
   return (
     <div className="background-component-container">
       <div className="text-content" ref={textRef}>
-        <h1 className="line">Revolutionize Your Aerial Perspective with DJI</h1>
+        <h1 className="line">Transform Your Skies: DJI's Aerial Revolution</h1>
         <p className="line background-component-container-text">
-          Experience next-level aerial photography and videography with DJI drones. Engineered for precision and equipped with innovative features, our drones empower you to capture stunning visuals from the sky.
+        Step into a new era of aerial exploration with DJI, where cutting-edge technology meets limitless creativity. Our drones are meticulously engineered with innovative flight systems and intelligent controls, enabling smooth maneuvers and precise performance even in the most challenging conditions. Capture crisp, detailed imagery and seamless video that brings your vision to life. With DJI, every flight is an invitation to explore, create, and push the boundaries of aerial photography and videography.
         </p>
         <div className="line">
           <GradientButton className="explore-button">Explore More</GradientButton>
