@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Footer.css';
+import Brand from "/images/djibrand.png";
 import HoverLink from '../HoverLink'; // ajuste o caminho conforme sua estrutura de pastas
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +47,7 @@ const Footer = () => {
 
       <div className="footer-text">
         {/* <h1>DJI Technology</h1> */}
-        <img src="/images/djibrand.png" alt="DJI Brand" />
+        <img src={Brand} alt="DJI Brand" />
       </div>
     </footer>
   );
