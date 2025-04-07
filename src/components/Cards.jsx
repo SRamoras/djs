@@ -1,5 +1,4 @@
-// ScrollComponent.jsx
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./Cards.css";
@@ -9,10 +8,34 @@ import Tree from "/images/3.webp";
 import Four from "/images/4.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import GradientButton from "./GradientButton";
+
+
+
+
 const ScrollComponent = () => {
+  const textCardsRef = useRef(null);
   useEffect(() => {
+
     gsap.registerPlugin(ScrollTrigger);
-  
+    const lines = textCardsRef.current.querySelectorAll(".line");
+    gsap.fromTo(
+      lines,
+      { y: 20, filter: "blur(5px)", opacity: 0 },
+      {
+        y: 0,
+        filter: "blur(0px)",
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: lines[0], // usa o primeiro elemento com .line como trigger
+          start: "top 80%",
+        
+        }
+      }
+    );
+
     // Cria o ScrollTrigger para fixar o container-text-cards
     ScrollTrigger.create({
       trigger: ".scroll-section",
@@ -24,7 +47,7 @@ const ScrollComponent = () => {
       },
       pin: ".container-text-cards",
       pinSpacing: false,
-      // markers: true, // descomente para debugar
+ 
     });
   
     const scrollSections = document.querySelectorAll(".scroll-section");
@@ -61,7 +84,7 @@ const ScrollComponent = () => {
           },
           scrub: 1,
           invalidateOnRefresh: true,
-          // markers: true, // descomente para debugar
+      
         },
         defaults: { ease: "none" },
       });
@@ -91,12 +114,13 @@ const ScrollComponent = () => {
 
   return (
     <main className="main-wrapper">
-      <div className="container-text-cards">
-  <h1>Innovate. Capture. Soar.</h1>
-  <h2>Discover Our Latest Innovations</h2>
-  <p>
-    Explore our range of cutting-edge products designed to empower your creative journey. The OSMO MOBILE 7 SERIES offers superior stabilization for mobile videography, while the OSMO ACTION 5 PRO is built for capturing extreme action. With the versatile DJI FLIP, unleash your creative potential, and check out our guide on "How to choose a drone" for expert tips on making the perfect selection.
-  </p></div>
+ <div className="container-text-cards" ref={textCardsRef}>
+        <h1 className="line">Innovate. Capture. Soar.</h1>
+        <h2 className="line">Discover Our Latest Innovations</h2>
+        <p className="line">
+          Explore our range of cutting-edge products designed to empower your creative journey. The OSMO MOBILE 7 SERIES offers superior stabilization for mobile videography, while the OSMO ACTION 5 PRO is built for capturing extreme action. With the versatile DJI FLIP, unleash your creative potential, and check out our guide on "How to choose a drone" for expert tips on making the perfect selection.
+        </p>
+      </div>
       {/* Seção de Scroll Vertical */}
       <section className="scroll-section vertical-section section">
   <div className="wrapper">

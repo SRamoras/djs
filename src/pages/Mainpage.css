@@ -3,6 +3,8 @@ padding: 0 20px 20px;
 background-color: #fff;
 border-bottom-left-radius: 55px;
 border-bottom-right-radius: 55px;
+position: relative;
+z-index: 1;
 }
 
 .main-page-content-text {
@@ -38,3 +40,11 @@ font-weight: 400;
   margin: 0;
   color: #000;
   font-family: NeueMontreal, sans-serif;}
+
+
+
+  .space-between{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+  }

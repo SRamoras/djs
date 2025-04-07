@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-import Logo from '/images/logo.png'; // Certifique-se de que o caminho está correto
+import Logo from '/images/logo.png';
+import WhiteLogo from '/images/logowhite.png';
 import GradientButton from '../GradientButton';
+
 const Header = () => {
   const [textColor, setTextColor] = useState('white');
+  const location = useLocation();
 
   useEffect(() => {
-    // Selecione o elemento de referência para a mudança de cor
     const videoContainer = document.querySelector('.video-container');
     if (!videoContainer) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Quando a .video-container estiver pelo menos 50% visível, use branco
-        // Caso contrário, altere para preto
+        // Se a .video-container estiver visível, mantenha o texto (e o logo) em branco; caso contrário, use preto
         setTextColor(entry.isIntersecting ? 'white' : 'black');
       },
       {
@@ -28,10 +30,22 @@ const Header = () => {
     };
   }, []);
 
+  const handleLogoClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className="header" style={{ color: textColor }}>
       <div className="logo">
-        <img src={Logo} alt="Logo" />
+        <Link to="/" onClick={handleLogoClick}>
+          <img src={textColor === 'white' ? WhiteLogo : Logo} alt="Logo" />
+        </Link>
       </div>
       <nav className="nav-buttons">
         <button className="btn">Home</button>

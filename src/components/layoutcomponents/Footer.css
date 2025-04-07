@@ -1,11 +1,13 @@
-footer{
-  position:sticky;
-  bottom:0;
-  left:0;
-  z-index: -1;
-height: 40vh;
-  background-color:#000;
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  /* Alterar o z-index para garantir que o footer seja interativo */
+  z-index: 0;
+  height: 40vh;
+  background-color: #000;
   overflow: hidden;
+  color: #fff;
 }
   
   .footer-options {
@@ -17,12 +19,14 @@ height: 40vh;
     padding-top: 4rem;
     padding-bottom: 4rem;
     margin: 0 auto;
+    align-items: center;
   }
   .footer-options div {
     display: flex;
     align-items: center;
     gap: 20px;
   }
+
   .footer-options a {
     color: #fff;
     text-decoration: none;
@@ -39,15 +43,19 @@ display: flex;
 justify-content: center;
 
   }
+  .footer-text img{
+    width: 1300px;
+    position: absolute;
+ 
+  }
   .footer-text h1 {
     margin: 0;
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     font-size: 180px;
     display: inline-block;
     font-weight: 900;
     transform: scaleY(1.1);
-
     background: linear-gradient(180deg, rgba(255,239,0,1) 0%, rgba(255,196,0,1) 52%, rgba(255,145,0,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;

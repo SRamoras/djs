@@ -2,15 +2,34 @@
 height: 70vh;
 width: 100%;
 display: flex;
-justify-content: center;
-align-items: start;
+justify-content: space-between;
+align-items: center;
 gap: 40px;
-flex-direction: column;
-padding:0 50px;
-margin: 100px 0;
+flex-direction: row;
+padding:50px;
+
 border-radius: 55px;
 background: linear-gradient(180deg, rgba(255,239,0,1) 0%, rgba(255,196,0,1) 52%, rgba(255,145,0,1) 100%);
 }
+.video-container-background{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video-background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 65px;
+}
+
+
+
+
 
 .background-component-container div{
     width: 40%;

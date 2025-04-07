@@ -1,0 +1,53 @@
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+
+}
+.hover-link-container {
+display: flex;
+align-items: center;
+}
+/* Ambos os spans possuem transição */
+a span.default,
+a span.hover {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Estado default usa a cor original */
+a span.default {
+  display: flex;
+  align-items: center;
+
+}
+
+/* Estado hover inicia fora da vista e recebe o gradiente */
+a span.hover {
+  position: absolute;
+  top: 0;  display: flex;
+  align-items: center;
+  left: 0;
+  transform: translateY(100%);
+  background: linear-gradient(180deg, rgba(255,239,0,1) 0%, #ffc400 52%, rgba(255,145,0,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Ao hover, a versão default desliza para cima */
+a:hover span.default {
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+}
+
+/* Ao hover, a versão hover desliza para ocupar a posição original */
+a:hover span.hover {
+  transform: translateY(0);
+  display: flex;
+  align-items: center;
+}

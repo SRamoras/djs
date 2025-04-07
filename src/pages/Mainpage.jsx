@@ -8,19 +8,25 @@ import Header from '../components/layoutcomponents/Header';
 import OptionComponent from '../components/optioncomponent'; 
 import Footer from '../components/layoutcomponents/Footer';
 import Videocomponent from '../components/Videocomponent';
-import Backgroundcomponent from '../components/Backgroundcomponent'; // ajuste o caminho conforme sua estrutura de pastas
+import Backgroundcomponent from '../components/Backgroundcomponent'; 
+import HoverLink from '../components/HoverLink'; // Importando o componente HoverLink
 const Mainpage = () => {
   return (
     <div className="main-page-container">
       {/* <Header /> */}
       <Heading />  
       <Textcomponent />
+          <div className='space-between'>
       <Defaultcomponent />
+ 
       <Component1 />
+     
       <OptionComponent />  
+     
       <Backgroundcomponent />
+     
       <Videocomponent />
-   
+   </div> 
       {/* <Footer />  */}
 {/* <div className='main-page-content-text'>
       <h1>Welcome to the World of Drones</h1>
@@ -31,6 +37,10 @@ const Mainpage = () => {
 <div className='main-page-content-text'>
 <h1>Cost-effective, reliable and used by hundreds of pharmacies today</h1>
 </div>
+
+
+
+
     </div>
   );
 };
