@@ -46,7 +46,7 @@ font-weight: 400;
   .space-between{
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 120px;
   }
 
   

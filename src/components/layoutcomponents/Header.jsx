@@ -52,9 +52,9 @@ const Header = () => {
           {/* Navegação inline: visível apenas no desktop */}
           <nav className="nav-links" style={{ color: textColor }}>
             <Link to="/" style={{ color: textColor }}>Home</Link>
-            <Link to="/about" style={{ color: textColor }}>About</Link>
-            <Link to="/services" style={{ color: textColor }}>Services</Link>
-            <Link to="/contact" style={{ color: textColor }}>Contact</Link>
+            <Link to="/kids" style={{ color: textColor }}>Dji kids</Link>
+            <Link to="/agriculture" style={{ color: textColor }}>Dji Agriculture</Link>
+            <Link to="/transportation" style={{ color: textColor }}>Dji Transportation</Link>
           </nav>
           {/* Botão Gradient sempre visível */}
           <GradientButton className="gradient-btn">Get Started</GradientButton>
