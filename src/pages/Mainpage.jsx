@@ -35,7 +35,7 @@ const Mainpage = () => {
 
 
 <div className='main-page-content-text'>
-<h1>Cost-effective, reliable and used by hundreds of pharmacies today</h1>
+<h1>Cost-effective, reliable and flown by hundreds of professionals today.</h1>
 </div>
 
 
