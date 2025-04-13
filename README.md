@@ -6,7 +6,7 @@ This repository contains a small design project focused on highlighting and enha
 
 ## Live Demo
 
-Check out the live demo here: [https://sramoras.github.io/djs/](https://sramoras.github.io/djs/)
+Check out the live demo here: [Live Demo](https://sramoras.github.io/djs/)
 
 ## Project Objectives
 
