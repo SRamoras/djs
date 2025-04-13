@@ -1,12 +1,27 @@
-# React + Vite
+![alt](/src/assets/djireadme.jpg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DJI Design Project
 
-Currently, two official plugins are available:
+This repository contains a small design project focused on highlighting and enhancing the DJI brand. Through this project, I explored visual and conceptual elements that reflect the innovation and values associated with DJI, contributing to a better understanding and appreciation of the brand and its products.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## Expanding the ESLint configuration
+Check out the live demo here: [https://sramoras.github.io/djs/](https://sramoras.github.io/djs/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Objectives
+
+- **Brand Exposure:** Develop a design that emphasizes the innovative and technological aspects linked to DJI.
+- **Visual Communication:** Create visual materials that capture the modern and functional aesthetics of the brand, focusing on clarity and visual impact.
+- **Innovation:** Showcase how a streamlined design approach with dynamic animations can enhance brand perception.
+
+## Repository Contents
+
+- **/assets:** Images, logos, and other graphic elements used in the project.
+- **/docs:** Additional documentation and presentations related to the design and concepts applied.
+- **README.md:** This file providing an overview of the project and its specifications.
+
+## Technologies and Tools Used
+
+- **Framework:** React.js for building the project structure and user interface.
+- **Animation Library:** GSAP for smooth and advanced animations.
+- **Note:** No other tools or frameworks were used in this project.
