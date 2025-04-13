@@ -1,4 +1,4 @@
-![alt](/images/djireadme.jpg)
+![alt](/images/djireadme.png)
 
 # DJI Design Project
 
