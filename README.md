@@ -1,4 +1,4 @@
-![Descrição da Imagem](public/images/djireadme.png)
+![Imagem](public/images/djireadme.png)
 
 # DJI Design Project
 
