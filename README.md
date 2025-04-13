@@ -14,14 +14,10 @@ Check out the live demo here: [https://sramoras.github.io/djs/](https://sramoras
 - **Visual Communication:** Create visual materials that capture the modern and functional aesthetics of the brand, focusing on clarity and visual impact.
 - **Innovation:** Showcase how a streamlined design approach with dynamic animations can enhance brand perception.
 
-## Repository Contents
-
-- **/assets:** Images, logos, and other graphic elements used in the project.
-- **/docs:** Additional documentation and presentations related to the design and concepts applied.
-- **README.md:** This file providing an overview of the project and its specifications.
-
 ## Technologies and Tools Used
 
-- **Framework:** React.js for building the project structure and user interface.
-- **Animation Library:** GSAP for smooth and advanced animations.
-- **Note:** No other tools or frameworks were used in this project.
+- **React:** Main framework for building the user interface.
+- **Vite:** A fast and optimized build and development tool.
+- **GSAP (GreenSock Animation Platform):** Library for creating advanced, high-performance animations.
+- **React Router:** Manages routing using hash-based navigation for better compatibility with GitHub Pages.
+- **gh-pages:** Automates deployment on GitHub Pages.
